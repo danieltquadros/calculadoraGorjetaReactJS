@@ -25,7 +25,7 @@ function App(){
       <p>Qual a porcentagem de gorjeta?</p>
       <Input type="number" value={gorjeta} onChange={(e)=>setGorjeta(parseFloat(e.target.value))}/>
       <hr/>
-      {conta != 0 &&
+      {conta > 0 &&
         <>
           <p>Sub-total: R$ {conta.toFixed(2)}</p>
           <p>Gorjeta({gorjeta}%): R$ {((gorjeta/100) * conta).toFixed(2)}</p>
